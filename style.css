@@ -1,6 +1,7 @@
 body {
             margin: 0;
             font-family: Arial, sans-serif;
+            padding: 0;
         }
         .header {
             display: flex;
@@ -43,4 +44,38 @@ body {
         .main-image {
             width: 100%;
             height: auto;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .service-item {
+            color: #007bff;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .service-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #f9f9f9;
+        }
+        .service-item i {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .service-item p {
+            font-size: 16px;
+            margin: 0;
+        }
+        .service-item a {
+            text-decoration: none;
+            color: inherit;
         }
