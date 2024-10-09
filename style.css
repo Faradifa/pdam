@@ -100,3 +100,36 @@ body {
             font-size: 24px;
             padding: 10px;
         }
+
+           .carousel {
+                display: flex;
+                overflow: hidden;
+                position: relative;
+            }
+            .carousel-inner {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+            .carousel-item {
+                min-width: 50%;
+                box-sizing: border-box;
+            }
+            .carousel-button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(255, 255, 255, 0.7);
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                display: none;
+            }
+            .carousel-button.right {
+                right: 10px;
+                display: block;
+            }
+            .carousel:hover .carousel-button.left {
+                display: block;
+            }
+
+            
