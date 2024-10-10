@@ -1,135 +1,191 @@
+:root {
+    --primary: #466AF7;
+    --phover: #879efb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
 body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 0;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: white;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ddd;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            height: 50px;
-            margin-right: 10px;
-        }
-        .logo span {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
-        .nav {
-            display: flex;
-            align-items: center;
-        }
-        .nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-            font-weight: bold;
-            margin: 0 15px;
-        }
-        .nav a:hover {
-            color: #000;
-        }
-        .nav a.active {
-            color: #000;
-        }
-        .main-image {
-            width: 100%;
-            height: auto;
-        }
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: #000;
+}
 
-        .container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            background-color: #ffffff;
-        }
-        .service-item {
-            color: #007bff;
-            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-            padding: 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .service-item:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            background-color: #f9f9f9;
-        }
-        .service-item i {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        .service-item p {
-            font-size: 16px;
-            margin: 0;
-        }
-        .service-item a {
-            text-decoration: none;
-            color: inherit;
-        }
+/* Navbar */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 7%;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
 
-        .container-cek {
-            text-align: center;
-        }
-        .title {
-            color: #1a73e8;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .input-box {
-            margin-top: 20px;
-        }
-        .input-box input {
-            width: 600px;
-            height: 100px;
-            border-radius: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 24px;
-            padding: 10px;
-        }
+.header .logo {
+    display: flex;
+    align-items: center;
+}
 
-           .carousel {
-                display: flex;
-                overflow: hidden;
-                position: relative;
-            }
-            .carousel-inner {
-                display: flex;
-                transition: transform 0.5s ease;
-            }
-            .carousel-item {
-                min-width: 50%;
-                box-sizing: border-box;
-            }
-            .carousel-button {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background-color: rgba(255, 255, 255, 0.7);
-                border: none;
-                padding: 10px;
-                cursor: pointer;
-                display: none;
-            }
-            .carousel-button.right {
-                right: 10px;
-                display: block;
-            }
-            .carousel:hover .carousel-button.left {
-                display: block;
-            }
+/* .logo img {
+    height: 50px;
+    margin-right: 10px;
+} */
 
-            
+/* .logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    } */
+
+.header .nav a {
+    color: var(--primary);
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.header .nav a:hover {
+    color: var(--phover);
+}
+
+.header .nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.header .nav a::after:hover {
+    transform: scaleX(0.5);
+}
+
+/* .nav a.active {
+    color: var(--primary);
+} */
+
+.nav-extra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar End */
+
+
+.main-image {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.service-item {
+    color: #007bff;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.service-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+.service-item i {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.service-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container-cek {
+    text-align: center;
+}
+
+.title {
+    color: #1a73e8;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input-box {
+    margin-top: 20px;
+}
+
+.input-box input {
+    width: 600px;
+    height: 100px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    padding: 10px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 50%;
+    box-sizing: border-box;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.carousel-button.right {
+    right: 10px;
+    display: block;
+}
+
+.carousel:hover .carousel-button.left {
+    display: block;
+}
