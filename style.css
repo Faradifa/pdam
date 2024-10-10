@@ -38,50 +38,39 @@ body {
     align-items: center;
 }
 
-/* .logo img {
-    height: 50px;
-    margin-right: 10px;
-} */
-
-/* .logo span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    } */
-
 .header .nav a {
     color: var(--primary);
     display: inline-block;
     font-size: 1rem;
     margin: 0 1rem;
+    position: relative; /* Perlu untuk memposisikan pseudo-elemen */
+    text-decoration: none; /* Menghapus garis bawah default */
 }
 
-.header .nav a:hover {
-    color: var(--phover);
-}
-
+/* Garis bawah muncul saat di-hover dengan animasi */
 .header .nav a::after {
     content: '';
     display: block;
-    padding-bottom: 0.5rem;
-    border-bottom: 0.1rem solid var(--primary);
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    position: absolute;
+    bottom: -5px; /* Mengatur posisi di bawah teks */
+    left: 0;
     transform: scaleX(0);
-    transition: 0.2s linear;
+    transition: transform 0.3s ease;
 }
 
-.header .nav a::after:hover {
-    transform: scaleX(0.5);
+/* Menampilkan garis bawah saat di-hover */
+.header .nav a:hover::after {
+    transform: scaleX(1);
 }
 
-/* .nav a.active {
-    color: var(--primary);
-} */
-
-.nav-extra {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Garis bawah tetap ada pada link aktif */
+.header .nav a.active::after {
+    transform: scaleX(1);
 }
+
 
 /* Navbar End */
 
