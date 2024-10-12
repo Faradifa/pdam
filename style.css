@@ -43,8 +43,10 @@ body {
     display: inline-block;
     font-size: 1rem;
     margin: 0 1rem;
-    position: relative; /* Perlu untuk memposisikan pseudo-elemen */
-    text-decoration: none; /* Menghapus garis bawah default */
+    position: relative;
+    /* Perlu untuk memposisikan pseudo-elemen */
+    text-decoration: none;
+    /* Menghapus garis bawah default */
 }
 
 /* Garis bawah muncul saat di-hover dengan animasi */
@@ -55,7 +57,8 @@ body {
     height: 2px;
     background-color: var(--primary);
     position: absolute;
-    bottom: -5px; /* Mengatur posisi di bawah teks */
+    bottom: -8px;
+    /* Mengatur posisi di bawah teks */
     left: 0;
     transform: scaleX(0);
     transition: transform 0.3s ease;
@@ -63,14 +66,17 @@ body {
 
 /* Menampilkan garis bawah saat di-hover */
 .header .nav a:hover::after {
-    transform: scaleX(1);
+    transform: scaleX(0.5);
 }
 
 /* Garis bawah tetap ada pada link aktif */
 .header .nav a.active::after {
-    transform: scaleX(1);
+    transform: scaleX(0.5);
 }
 
+.header .nav-extra {
+    justify-content: space-between;
+}
 
 /* Navbar End */
 
@@ -121,6 +127,11 @@ body {
 
 .container-cek {
     text-align: center;
+}
+
+.galeri {
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .title {
@@ -177,4 +188,10 @@ body {
 
 .carousel:hover .carousel-button.left {
     display: block;
+}
+
+.container-berita {
+    /* padding: 1.4rem 7%; */
+    padding-left: 60px;
+    padding-right: 60px;
 }

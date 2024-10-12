@@ -18,3 +18,5 @@ let currentIndex = 0;
    function prevSlide() {
      showSlide(currentIndex - 1);
    }
+
+   
